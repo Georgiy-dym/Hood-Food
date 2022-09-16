@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <H1 align="center"> Hood Food - Сервис заказа еды</H1>
+    {% if tasks %}
+        {% for el in tasks %}
+            <div class="alert alert-warning mt-5">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.task }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Пока нет ни одной записи</p>
+    {% endif %}
+{% endblock %}
+

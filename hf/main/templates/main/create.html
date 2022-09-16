@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Создать ЗАДАЧУ
+{% endblock %}
+
+{% block content %}
+    <H2>Создать задачу</H2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.task }}
+        <input type="text" placeholder="Введите название" class="form-control"><br>
+        <textarea datatype="text" placeholder="Введите описание" class="form-control"> </textarea><br>
+        <button type="button" class="btn btn-success">Добавить</button>
+    </form>
+{% endblock %}
